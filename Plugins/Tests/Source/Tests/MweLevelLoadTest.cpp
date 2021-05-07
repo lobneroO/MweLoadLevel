@@ -10,7 +10,7 @@ END_DEFINE_SPEC(FMweLoadLevelTest)
 
 void FMweLoadLevelTest::Define()
 {
-	It("1 Load Level", EAsyncExecution::TaskGraphMainThread, FTimespan(0, 30, 0), [this](const FDoneDelegate& Done)
+	/*Latent*/It("1 Load Level", EAsyncExecution::TaskGraphMainThread, FTimespan(0, 30, 0), [this](/*const FDoneDelegate& Done*/)
 	{
 		FString levelPath = FString("") / "Game" / "L1";
 		AutomationOpenMap(levelPath);
